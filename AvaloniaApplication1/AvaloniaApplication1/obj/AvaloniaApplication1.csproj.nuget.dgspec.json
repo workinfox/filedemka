@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "/home/gr622_krami/RiderProjects/AvaloniaApplication1/AvaloniaApplication1/AvaloniaApplication1.csproj": {}
+    "D:\\projects\\base\\AvaloniaApplication1\\AvaloniaApplication1\\AvaloniaApplication1.csproj": {}
   },
   "projects": {
-    "/home/gr622_krami/RiderProjects/AvaloniaApplication1/AvaloniaApplication1/AvaloniaApplication1.csproj": {
+    "D:\\projects\\base\\AvaloniaApplication1\\AvaloniaApplication1\\AvaloniaApplication1.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/gr622_krami/RiderProjects/AvaloniaApplication1/AvaloniaApplication1/AvaloniaApplication1.csproj",
+        "projectUniqueName": "D:\\projects\\base\\AvaloniaApplication1\\AvaloniaApplication1\\AvaloniaApplication1.csproj",
         "projectName": "AvaloniaApplication1",
-        "projectPath": "/home/gr622_krami/RiderProjects/AvaloniaApplication1/AvaloniaApplication1/AvaloniaApplication1.csproj",
-        "packagesPath": "/home/gr622_krami/.nuget/packages/",
-        "outputPath": "/home/gr622_krami/RiderProjects/AvaloniaApplication1/AvaloniaApplication1/obj/",
+        "projectPath": "D:\\projects\\base\\AvaloniaApplication1\\AvaloniaApplication1\\AvaloniaApplication1.csproj",
+        "packagesPath": "C:\\Users\\Арина\\.nuget\\packages\\",
+        "outputPath": "D:\\projects\\base\\AvaloniaApplication1\\AvaloniaApplication1\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/home/gr622_krami/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\Арина\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net9.0"
@@ -24,6 +24,7 @@
         },
         "frameworks": {
           "net9.0": {
+            "framework": "net9.0",
             "targetAlias": "net9.0",
             "projectReferences": {}
           }
@@ -38,10 +39,11 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "9.0.100"
+        "SdkAnalysisLevel": "10.0.300"
       },
       "frameworks": {
         "net9.0": {
+          "framework": "net9.0",
           "targetAlias": "net9.0",
           "dependencies": {
             "Avalonia": {
@@ -88,12 +90,30 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[9.0.16, 9.0.16]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Host.win-x64",
+              "version": "[9.0.16, 9.0.16]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[9.0.16, 9.0.16]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[9.0.16, 9.0.16]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/9.0.101/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.300/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

@@ -31,6 +31,9 @@ public partial class MainWindow : Window
         string file = "ТестКейс.docx"; //название документа
 
         string pattern = @"^[А-ЯЁ][а-яё]+ [А-ЯЁ][а-яё]+ [А-ЯЁ][а-яё]+$";
+        //"^\d{2} \d{2} \d{6}$" - паспорт
+        //"^[^@]+@[^@]+\.[^@]+$"  - email
+        //"^\+7 \d{3} \d{3}-\d{2}-\d{2}$" - номер телефона
         Regex regex = new Regex(pattern);
 
         if (regex.IsMatch(FIO.Text))
