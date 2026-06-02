@@ -1,0 +1,51 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        x:Class="AppAuth.Views.AdminWindow"
+        Width="700"
+        Height="600"
+        Title="Админ-панель">
+
+    <StackPanel Margin="20" Spacing="10">
+
+        <TextBlock Text="Создание пользователя"
+                   FontSize="20"/>
+
+        <TextBox Name="LoginBox"
+                 PlaceholderText="Логин"/>
+
+        <TextBox Name="PasswordBox"
+                 PlaceholderText="Пароль"/>
+
+        <ComboBox Name="RoleBox"
+                  SelectedIndex="0">
+
+            <ComboBoxItem Content="Пользователь"/>
+            <ComboBoxItem Content="Администратор"/>
+
+        </ComboBox>
+
+        <Button Content="Создать"
+                Click="OnCreateUser"/>
+
+        <TextBlock Text="Список пользователей"
+                   FontSize="20"
+                   Margin="0,20,0,0"/>
+
+        <ListBox Name="UsersList"
+                 Height="250"/>
+
+        <Button Content="Заблокировать"
+                Click="OnBlockUser"/>
+
+        <Button Content="Удалить"
+                Click="OnDeleteUser"/>
+
+        <Button Content="Изменить пароль"
+                Click="OnEditUser"/>
+
+        <TextBlock Name="InfoText"/>
+
+        <Button Content="Выйти из системы" Click="OnLogoutClick"/>
+
+    </StackPanel>
+</Window>

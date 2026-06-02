@@ -1,0 +1,68 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        x:Class="AppAuth.Views.LoginWindow"
+        Width="500"
+        Height="650"
+        Title="Авторизация">
+
+    <StackPanel Margin="20" Spacing="10">
+
+        <TextBlock Text="Логин"/>
+        <TextBox Name="LoginTextBox"/>
+
+        <TextBlock Text="Пароль"/>
+        <TextBox Name="PasswordTextBox"
+                 PasswordChar="*"/>
+
+        <TextBlock Text="Соберите изображения в правильном порядке"
+                   FontSize="16"
+                   Margin="0,10,0,10"/>
+
+        <WrapPanel HorizontalAlignment="Center">
+
+            <Button Width="100"
+                    Height="100"
+                    Margin="5"
+                    Click="CaptchaClick1">
+
+                <Image Source="avares://AppAuth/Assets/3.png"/>
+            </Button>
+
+            <Button Width="100"
+                    Height="100"
+                    Margin="5"
+                    Click="CaptchaClick2">
+
+                <Image Source="avares://AppAuth/Assets/1.png"/>
+            </Button>
+
+            <Button Width="100"
+                    Height="100"
+                    Margin="5"
+                    Click="CaptchaClick3">
+
+                <Image Source="avares://AppAuth/Assets/4.png"/>
+            </Button>
+
+            <Button Width="100"
+                    Height="100"
+                    Margin="5"
+                    Click="CaptchaClick4">
+
+                <Image Source="avares://AppAuth/Assets/2.png"/>
+            </Button>
+
+        </WrapPanel>
+
+        <TextBlock Name="CaptchaText"
+                   FontSize="14"/>
+
+        <Button Content="Войти"
+                Margin="0,20,0,0"
+                Click="OnLoginClick"/>
+
+        <TextBlock Name="ErrorTextBlock"
+                   Foreground="Red"/>
+
+    </StackPanel>
+</Window>

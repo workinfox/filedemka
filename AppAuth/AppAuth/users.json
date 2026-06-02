@@ -1,0 +1,26 @@
+[
+  {
+    "Id": 1,
+    "Login": "admin",
+    "Password": "123",
+    "Role": "Администратор",
+    "IsBlocked": false,
+    "FailedAttempts": 0
+  },
+  {
+    "Id": 2,
+    "Login": "www",
+    "Password": "www4",
+    "Role": "Пользователь",
+    "IsBlocked": false,
+    "FailedAttempts": 0
+  },
+  {
+    "Id": 3,
+    "Login": "qwerty",
+    "Password": "qwe",
+    "Role": "Пользователь",
+    "IsBlocked": true,
+    "FailedAttempts": 0
+  }
+]

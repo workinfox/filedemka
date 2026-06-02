@@ -1,0 +1,11 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        x:Class="AppAuth.Views.MainWindow"
+        Title="Главное окно" Width="400" Height="300">
+
+    <StackPanel Margin="20">
+        <TextBlock Name="WelcomeText" FontSize="16" Margin="0,0,0,20"/>
+        <Button Content="Управлять пользователями" Click="OnAdminClick"/>
+        <Button Content="Выйти из системы" Click="OnLogoutClick"/>
+    </StackPanel>
+</Window>
