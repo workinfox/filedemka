@@ -28,24 +28,25 @@ public partial class MainWindow : Window
 
     private void SendResultTest(object? sender, RoutedEventArgs e)
     {
-        string file = "ТестКейс.docx";
+        string file = "ТестКейс.docx"; //название документа
 
         string pattern = @"^[^@]+@[^@]+\.[^@]+$";
         //паттерны
         //"^\d{2} \d{2} \d{6}$" - паспорт
         //"^[^@]+@[^@]+\.[^@]+$"  - email
         //"^\+7 \d{3} \d{3}-\d{2}-\d{2}$" - номер телефона
+
         Regex regex = new Regex(pattern);
 
         if (regex.IsMatch(email.Text ?? ""))
         {
-            Result.Text = "почта корректная";
+            Result.Text = "email корректный";
             //успешный вариант теста
                 ReplaceTextInDocx(file, "Result" , "Успешно"); //в документе поменяются данные, только тогда, когда там будет стоять маркер - Result
         }
         else
         {
-            Result.Text = "почта не корректная";
+            Result.Text = "email не корректный";
             //неуспешный ваиант теста
             ReplaceTextInDocx(file, "#res#", "Не успешно"); //в документе поменяются данные, только тогда, когда там будет стоять маркер - #res#
 
