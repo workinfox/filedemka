@@ -20,31 +20,32 @@ public partial class MainWindow : Window
     {
         HttpClient client = new HttpClient();
         HttpRequestMessage request =
-            new HttpRequestMessage(HttpMethod.Get, "http://62.109.5.161:4444/TransferSimulator/fullName");
+            new HttpRequestMessage(HttpMethod.Get, "http://62.109.5.161:4444/TransferSimulator/email");
         var res =  client.Send(request);
         dynamic json = JsonConvert.DeserializeObject(res.Content.ReadAsStringAsync().Result);
-        FIO.Text = json.value;
+        email.Text = json.value;
     }
 
     private void SendResultTest(object? sender, RoutedEventArgs e)
     {
-        string file = "ТестКейс.docx"; //название документа
+        string file = "ТестКейс.docx";
 
-        string pattern = @"^[А-ЯЁ][а-яё]+ [А-ЯЁ][а-яё]+ [А-ЯЁ][а-яё]+$";
+        string pattern = @"^[^@]+@[^@]+\.[^@]+$";
+        //паттерны
         //"^\d{2} \d{2} \d{6}$" - паспорт
         //"^[^@]+@[^@]+\.[^@]+$"  - email
         //"^\+7 \d{3} \d{3}-\d{2}-\d{2}$" - номер телефона
         Regex regex = new Regex(pattern);
 
-        if (regex.IsMatch(FIO.Text))
+        if (regex.IsMatch(email.Text ?? ""))
         {
-            Result.Text = "ФИО не содержит запрещенные символы";
+            Result.Text = "почта корректная";
             //успешный вариант теста
                 ReplaceTextInDocx(file, "Result" , "Успешно"); //в документе поменяются данные, только тогда, когда там будет стоять маркер - Result
         }
         else
         {
-            Result.Text = "ФИО содержит запрещенные символы";
+            Result.Text = "почта не корректная";
             //неуспешный ваиант теста
             ReplaceTextInDocx(file, "#res#", "Не успешно"); //в документе поменяются данные, только тогда, когда там будет стоять маркер - #res#
 
